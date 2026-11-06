@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長野県工科短期大学校 就活講座特設サイト</title>
+    <!-- Tailwind CSSの読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ポップな印象を与えるための丸ゴシックフォントを読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // 全体に丸ゴシックを適用
+                        sans: ['"M PLUS Rounded 1c"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#FF8A00',
+                            yellow: '#FFD700',
+                            blue: '#00C2FF',
+                            bg: '#FFFBF0' // 優しいクリーム色の背景
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* カスタムのドロップシャドウや装飾 */
+        .title-highlight {
+            position: relative;
+            display: inline-block;
+        }
+        .title-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-color: theme('colors.brand.yellow');
+            z-index: -1;
+            border-radius: 9999px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- ヘッダーエリア -->
+    <header class="w-full pt-12 pb-6 px-4 text-center">
+        <!-- ロゴ画像 -->
+        <!-- 万が一画像が読み込めない場合に備えてプレースホルダーを設定 -->
+        <img 
+            src="https://raw.githubusercontent.com/t3takahashit3-cell/20261118kouka/main/logo.png" 
+            alt="ロゴ" 
+            class="mx-auto h-24 object-contain mb-6 drop-shadow-md rounded-2xl"
+            onerror="this.src='https://placehold.co/400x120/FF8A00/FFFFFF?text=LOGO&font=Montserrat'"
+        >
+        <h1 class="text-2xl md:text-3xl font-extrabold text-brand-orange tracking-wide mb-2">
+            長野県工科短期大学校
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-gray-700">
+            就活講座特設サイト
+        </p>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl pb-16">
+        
+        <!-- ヒーローセクション（講座概要） -->
+        <section class="bg-white rounded-[2rem] shadow-xl overflow-hidden mb-16 border-4 border-brand-blue relative">
+            <!-- ポップな装飾 -->
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-yellow rounded-full opacity-50 z-0"></div>
+            <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-brand-orange rounded-full opacity-20 z-0"></div>
+            
+            <div class="bg-brand-blue py-6 px-4 relative z-10 text-center">
+                <h2 class="text-white font-extrabold text-3xl md:text-4xl drop-shadow-md">
+                    シューカツ総点検‼
+                </h2>
+                <p class="text-blue-50 font-bold text-lg md:text-xl mt-2">
+                    ～就活の不安を解消！面接スキル向上セミナー～
+                </p>
+            </div>
+            
+            <div class="p-8 md:p-10 relative z-10 flex flex-col md:flex-row justify-around items-center gap-8 text-center">
+                <div class="bg-orange-50 rounded-2xl p-6 w-full md:w-1/2 border-2 border-orange-100 shadow-sm">
+                    <p class="text-brand-orange font-bold text-sm mb-1">開催日時</p>
+                    <p class="text-3xl md:text-4xl font-extrabold text-gray-800">
+                        2026<span class="text-2xl">年</span>11<span class="text-2xl">月</span>18<span class="text-2xl">日</span>
+                    </p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 w-full md:w-1/2 border-2 border-blue-100 shadow-sm">
+                    <p class="text-brand-blue font-bold text-sm mb-1">講師</p>
+                    <p class="text-2xl font-extrabold text-gray-800 mb-1">高橋 知也 <span class="text-lg font-medium text-gray-600 ml-1">先生</span></p>
+                    <p class="text-sm font-bold text-gray-500">産業カウンセラー・キャリアコンサルタント</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- プログラム内容セクション -->
+        <section>
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-extrabold text-gray-800 title-highlight z-10 relative">
+                    講座プログラム
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- カード 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border-b-[6px] border-brand-orange transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center group cursor-default">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl group-hover:scale-110 transition-transform duration-300">
+                        📝
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-gray-800">エントリーシート対策</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed text-left font-medium">
+                        企業が見ている「人柄・マッチング・能力」を押さえ、PREP法やSTAR法を用いて説得力のある自己PRやガクチカを作成するコツを学びます。
+                    </p>
+                </div>
+
+                <!-- カード 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border-b-[6px] border-brand-yellow transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center group cursor-default">
+                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl group-hover:scale-110 transition-transform duration-300">
+                        🤝
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-gray-800">対面面接対策</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed text-left font-medium">
+                        第一印象を左右する身だしなみや、会釈・敬礼などの正しいお辞儀の角度、尊敬語・謙譲語・丁寧語の適切な使い分けを実践的に確認します。
+                    </p>
+                </div>
+
+                <!-- カード 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border-b-[6px] border-brand-blue transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center group cursor-default">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl group-hover:scale-110 transition-transform duration-300">
+                        💻
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-gray-800">オンライン面接対策</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed text-left font-medium">
+                        物理的、ハードウェア、ネットワーク、ソフトウェアの4つの環境整備の重要性を理解し、画面越しでも熱意が伝わる話し方のポイントを学びます。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-auto">
+        <p class="text-sm font-medium tracking-wider">&copy; 2026 KOKUZO All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
